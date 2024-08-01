@@ -17,12 +17,14 @@ export default function Navbar() {
     }, [dark])
 
 
-    if (dark === "dark") {
-        document.body.style.backgroundColor = "hsl(207, 26%, 17%)"
+     if (dark === "dark") {
+        document.querySelector("body").style.backgroundColor = "hsl(207, 26%, 17%)";
     } else {
-        document.body.style.backgroundColor = "hsl(0, 0%, 98%)"
+        document.querySelector("body").style.backgroundColor = "hsl(0, 0%, 98%)";
+
 
     }
+
 
     return (
         <nav style={dark === "white" ? { backgroundColor: "white", color: "black", boxShadow: "0px 0px 5px hsl(0, 0%, 52%)" } : { backgroundColor: "hsl(209, 23%, 22%)", color: "white", boxShadow: "0px 0px 5px hsl(209, 23%, 22%)" }}>
