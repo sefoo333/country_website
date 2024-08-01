@@ -23,6 +23,13 @@ export default function Home() {
   let [reg_on, setReg] = useState(false);
   let [data, setData]: any = useState([]);
   let [mycountry, setCountry] = useState("egypt")
+  if (dark === "dark") {
+    document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
+  } else {
+    document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
+
+
+  }
 
   const ro = async () => {
     let res: any = ""
