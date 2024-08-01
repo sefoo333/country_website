@@ -14,14 +14,15 @@ export default function Navbar() {
 
     useEffect(() => {
         console.log(dark)
+  window.onload = function () {
+            if (dark === "dark") {
+                document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
+            } else {
+                document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
 
-          if (dark === "dark") {
-    document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
-  } else {
-    document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
 
-
-  }
+            }
+        }
 
     }, [dark])
 
