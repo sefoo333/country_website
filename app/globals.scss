@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  background-color: hsl(207, 26%, 17%);
+
+}
+
+.comp {
+
+  .image {
+    overflow: hidden;
+  }
+
+  img:hover {
+
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+}
+
+.parent {
+  height: calc(100vh - 75px);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@mixin center() {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px;
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+  align-items: center;
+
+  .dark {
+    @include center();
+    cursor: pointer;
+    user-select: none;
+
+    svg {
+      margin-right: 10px;
+      font-size: 25px;
+    }
+  }
+}
+
+.search_filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px;
+  align-items: center;
+
+  @media (max-width:767px) {
+    & {
+      align-items: start;
+    }
+  }
+
+  .search_comp {
+    @include center();
+    background-color: hsl(209, 23%, 22%);
+    padding: 15px 30px;
+    border-radius: 10px;
+
+    svg {
+      color: white;
+      margin-right: 10px;
+    }
+
+    input {
+      background-color: hsl(209, 23%, 22%);
+      outline: none;
+      border: none;
+      color: white;
+
+    }
+  }
+
+  .filter_comp {
+    background-color: hsl(209, 23%, 22%);
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    select {
+      background-color: hsl(209, 23%, 22%);
+      color: white;
+      width: 100%;
+      display: flex;
+      padding-right: 80px;
+      border: none;
+      outline: none;
+
+      option {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+
+.more {
+  span {
+    padding: 10px 0;
+  }
+}
