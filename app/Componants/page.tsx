@@ -14,16 +14,19 @@ export default function Navbar() {
 
     useEffect(() => {
         console.log(dark)
+
+          if (dark === "dark") {
+    document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
+  } else {
+    document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
+
+
+  }
+
     }, [dark])
 
 
-     if (dark === "dark") {
-        document.querySelector("body").style.backgroundColor = "hsl(207, 26%, 17%)";
-    } else {
-        document.querySelector("body").style.backgroundColor = "hsl(0, 0%, 98%)";
-
-
-    }
+    
 
 
     return (
