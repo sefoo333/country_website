@@ -5,6 +5,7 @@ import { MdDarkMode } from "react-icons/md"
 import { useDispatch, useSelector } from "react-redux"
 import { change } from "../rtk/slices/darkmode"
 import { CiLight } from "react-icons/ci";
+import Document from "next/document"
 
 
 export default function Navbar() {
@@ -14,20 +15,17 @@ export default function Navbar() {
 
     useEffect(() => {
         console.log(dark)
-  window.onload = function () {
-            if (dark === "dark") {
-                document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
-            } else {
-                document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
+        if (dark === "dark") {
+            document.body.style.backgroundColor = "hsl(207, 26%, 17%)";
+        } else {
+            document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
 
 
-            }
         }
+
 
     }, [dark])
 
-
-    
 
 
     return (

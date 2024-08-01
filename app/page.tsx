@@ -18,12 +18,13 @@ const regions = [
 
 export default function Home() {
 
+
+
   let dark = useSelector((state: any) => state.dark);
   let [religion, setReligion] = useState("all")
   let [reg_on, setReg] = useState(false);
   let [data, setData]: any = useState([]);
   let [mycountry, setCountry] = useState("egypt")
-
 
   const ro = async () => {
     let res: any = ""
@@ -51,7 +52,7 @@ export default function Home() {
 
 
 
-      <div className="search_filter max-sm:flex-col" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 98%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(207, 26%, 17%)", color: "white" }}>
+      <div className="search_filter max-lg:flex-col" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 98%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(207, 26%, 17%)", color: "white" }}>
         <div className="search_comp" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 100%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(209, 23%, 22%)", color: "white" }}>
           <FaSearch style={dark === "white" ? { color: "hsl(200, 15%, 8%)" } : { color: "white" }} />
           <input type="text" placeholder="search your religion" style={dark === "white" ? { color: "hsl(200, 15%, 8%)", backgroundColor: "transparent" } : { backgroundColor: "transparent" }} onChange={(a) => {
@@ -63,7 +64,7 @@ export default function Home() {
             }
           }} />
         </div>
-        <div className="filter_comp max-sm:mt-6" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 100%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(209, 23%, 22%)", color: "white" }}>
+        <div className="filter_comp max-lg:mt-6" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 100%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(209, 23%, 22%)", color: "white" }}>
           <select onChange={(a) => setReligion(a.target.value)} name="test" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 100%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(209, 23%, 22%)", color: "white" }}>
             <option value="all">All</option>
             {regions.map((e) => (
@@ -74,7 +75,7 @@ export default function Home() {
       </div>
 
 
-      <div className="countries_comp px-14 grid grid-cols-4 gap-4 max-sm:grid-cols-1" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 98%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(207, 26%, 17%)", color: "white" }}>
+      <div className="countries_comp px-14 grid grid-cols-4 gap-4 max-lg:grid-cols-1" style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 98%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(207, 26%, 17%)", color: "white" }}>
         {!reg_on ?
           data.filter((e: any) => e.name.common != "Israel").map((e: any) => {
             return (

@@ -50,6 +50,12 @@ nav {
   color: white;
   align-items: center;
 }
+@media (max-width: 767px) {
+  nav {
+    padding: 25px 30px;
+    text-wrap: nowrap;
+  }
+}
 nav .dark {
   display: flex;
   justify-self: center;
@@ -82,6 +88,11 @@ nav .dark svg {
   background-color: hsl(209, 23%, 22%);
   padding: 15px 30px;
   border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .search_filter .search_comp {
+    padding-right: 1px;
+  }
 }
 .search_filter .search_comp svg {
   color: white;

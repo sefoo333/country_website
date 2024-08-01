@@ -38,7 +38,7 @@ export default function country(props: any) {
     return (
         <>
 
-            <div className="parent px-14 " style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 98%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "rgb(32, 44, 55)", color: "white" }}>
+            <div className="parent px-14 " style={dark === "white" ? { backgroundColor: "hsl(0, 0%, 98%)", color: "hsl(200, 15%, 8%)" } : { backgroundColor: "hsl(209, 23%, 22%)", color: "white" }}>
                 <div className="container ">
 
                     <div className="button pt-5">

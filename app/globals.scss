@@ -69,6 +69,13 @@ nav {
   color: white;
   align-items: center;
 
+  @media(max-width:767px) {
+    & {
+      padding: 25px 30px;
+      text-wrap: nowrap;
+    }
+  }
+
   .dark {
     @include center();
     cursor: pointer;
@@ -98,6 +105,12 @@ nav {
     background-color: hsl(209, 23%, 22%);
     padding: 15px 30px;
     border-radius: 10px;
+
+    @media(max-width:767px) {
+      & {
+        padding-right: 1px;
+      }
+    }
 
     svg {
       color: white;
